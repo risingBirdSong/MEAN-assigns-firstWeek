@@ -46,3 +46,6 @@ chrisRobin.east = rabbit;
 chrisRobin.north = kanga;
 kanga.south = chrisRobin;
 kanga.north = eeyore;
+
+let travel = tigger;
+console.log(travel.north.north.west);
