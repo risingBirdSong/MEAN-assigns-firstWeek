@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>try it</h1>
+
+  <script>
+      // $.get("https://www.googleapis.com/books/v1/volumes?q=dune", function(data){
+      //   console.log(data);
+      // })
+  
+      const url = "https://www.googleapis.com/books/v1/volumes?q=dune";
+  
+      fetch(url)
+      .then(data => {return data.json()})
+      .then(res => {console.log(res)})
+  
+      
+    </script>
+
+</body>
+</html>
