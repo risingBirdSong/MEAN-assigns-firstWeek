@@ -1,36 +1,63 @@
 let tigger = {
   name: "tigger",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 };
 
 let winnieThePooh = {
   name: "Winnie the Pooh",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 let piglet = {
   name: "piglet",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 let chrisRobin = {
   name: "Chris Robin",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 let owl = {
   name: "owl",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 let bees = {
-  name: "bees"
+  name: "bees",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 let rabbit = {
-  name: "rabbit"
+  name: "rabbit",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 let kanga = {
-  name: "kanga"
+  name: "kanga",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 let eeyore = {
-  name: "eeyore"
+  name: "eeyore",
+  greet: function() {
+    console.log(`hi my name is ${this.name}`);
+  }
 }
 
 
@@ -68,7 +95,7 @@ kanga.north = eeyore;
 let player = {
   location: tigger,
   move: function(direction) {
-    if (direction != "north" || direction != "west" ||direction != "east" ||direction != "south"  ){
+    if (direction != "north" || direction != "west" || direction != "east" || direction != "south") {
       console.log("please enter a cardinal direction!");
     }
     if (direction == "north") {
@@ -78,6 +105,7 @@ let player = {
       else {
         this.location = this.location.north;
         console.log(`you have moved north and your new location is ${this.location.name}`);
+        this.location.greet();
       }
     }
 
@@ -87,6 +115,8 @@ let player = {
       }
       else this.location = this.location.south;
       console.log(`you have moved to the south, and the new location is ${this.location.name}`);
+      this.location.greet();
+
     }
     if (direction == "east") {
       if (this.location.east == null) {
@@ -94,6 +124,8 @@ let player = {
       }
       else this.location = this.location.east;
       console.log(`you have travelled east and your new location is ${this.location.name}`);
+      this.location.greet();
+
     }
 
     if (direction == "west") {
@@ -103,10 +135,12 @@ let player = {
       else {
         this.location = this.location.west
         console.log(`we have travelled west and our location is ${this.location.name}`);
+        this.location.greet();
+
       }
     }
   }
 }
 player.move("north");
 player.move("west");
-player.move("besa");
+
